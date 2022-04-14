@@ -1,3 +1,5 @@
+package chapter02;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 

@@ -1,3 +1,5 @@
+package chapter02;
+
 public class AmountDiscountPolicy extends DefaultDiscountPolicy {
 
     private Money discountAmount;

@@ -1,3 +1,5 @@
+package chapter02;
+
 public class PercentDiscountPolicy extends DefaultDiscountPolicy {
 
     private double percent;

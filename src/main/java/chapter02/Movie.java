@@ -1,3 +1,5 @@
+package chapter02;
+
 import java.time.Duration;
 
 public class Movie {

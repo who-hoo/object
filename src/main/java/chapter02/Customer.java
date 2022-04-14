@@ -1,3 +1,5 @@
+package chapter02;
+
 public class Customer {
 
     private String name;
