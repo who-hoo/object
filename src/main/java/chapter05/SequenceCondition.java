@@ -1,4 +1,6 @@
-public class SequenceCondition {
+package chapter05;
+
+public class SequenceCondition implements DiscountCondition {
 
     private int sequence;
 
@@ -7,6 +9,6 @@ public class SequenceCondition {
     }
 
     public boolean isSatisfiedBy(Screening screening) {
-        return screening.isSequence(sequence);
+        return sequence == screening.getSequence();
     }
 }
