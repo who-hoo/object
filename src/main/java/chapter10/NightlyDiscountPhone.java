@@ -3,7 +3,7 @@ package chapter10;
 import chapter02.Money;
 import java.time.Duration;
 
-public class NightlyDiscountPhone extends AbstractPhone {
+public class NightlyDiscountPhone extends Phone {
 
     private static final int LATE_NIGHT_HOUR = 22;
 
