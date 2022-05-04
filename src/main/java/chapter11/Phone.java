@@ -20,4 +20,5 @@ public abstract class Phone {
     }
 
     protected abstract Money calculateCallFee(Call call);
+    protected abstract Money afterCalculated(Money fee);
 }
