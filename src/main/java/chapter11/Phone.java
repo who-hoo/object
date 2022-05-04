@@ -3,25 +3,23 @@ package chapter11;
 import chapter02.Money;
 import chapter10.Call;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public abstract class Phone {
+public class Phone {
 
+    private RatePolicy ratePolicy;
     private List<Call> calls = new ArrayList<>();
 
+    public Phone(RatePolicy ratePolicy) {
+        this.ratePolicy = ratePolicy;
+    }
+
+    public List<Call> getCalls() {
+        return Collections.unmodifiableList(calls);
+    }
+
     public Money calculateFee() {
-        Money result = Money.ZERO;
-
-        for (Call call : calls) {
-            result = result.plus(calculateCallFee(call));
-        }
-
-        return result;
+        return ratePolicy.calculateFee(this);
     }
-
-    protected Money afterCalculated(Money fee) {
-        return fee;
-    }
-
-    protected abstract Money calculateCallFee(Call call);
 }
